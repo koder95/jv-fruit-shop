@@ -14,7 +14,7 @@ import java.util.List;
 public class CsvReportSerializer implements ReportSerializer {
     @Override
     public void save(Report report, Path path) {
-        List<String> csvRows = createCSVRows(report);
+        List<String> csvRows = createCsvRows(report);
         try (BufferedWriter writer = Files.newBufferedWriter(path)) {
             for (String line : csvRows) {
                 writer.write(line);
@@ -26,14 +26,14 @@ public class CsvReportSerializer implements ReportSerializer {
         }
     }
 
-    private List<String> createCSVRows(Report report) {
+    private List<String> createCsvRows(Report report) {
         List<String> lines = new ArrayList<>();
         lines.add("fruit,quantity");
-        report.consume((fruitType, amount) -> lines.add(createCSVRow(fruitType, amount)));
+        report.consume((fruitType, amount) -> lines.add(createCsvRow(fruitType, amount)));
         return lines;
     }
 
-    private String createCSVRow(FruitType fruitType, BigInteger amount) {
+    private String createCsvRow(FruitType fruitType, BigInteger amount) {
         return String.join(",", fruitType.name(), amount.toString());
     }
 }
