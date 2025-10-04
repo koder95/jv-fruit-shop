@@ -25,8 +25,9 @@ import java.util.List;
 import java.util.Map;
 
 public class Main {
-    public static final Path LOAD_PATH = Path.of("reportToRead.csv");
-    public static final Path SAVE_PATH = Path.of("finalReport.csv");
+    private static final Path MAIN_RESOURCES = Path.of("src/main/resources");
+    public static final Path LOAD_PATH = MAIN_RESOURCES.resolve("reportToRead.csv");
+    public static final Path SAVE_PATH = MAIN_RESOURCES.resolve("finalReport.csv");
 
     public static void main(String[] args) {
         // read data
