@@ -11,10 +11,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class CSVTransactionRequestDeserializer implements TransactionRequestDeserializer {
+public class CsvTransactionRequestDeserializer implements TransactionRequestDeserializer {
     private final FruitTypeFactory fruitTypeFactory;
 
-    public CSVTransactionRequestDeserializer(FruitTypeFactory fruitTypeFactory) {
+    public CsvTransactionRequestDeserializer(FruitTypeFactory fruitTypeFactory) {
         this.fruitTypeFactory = fruitTypeFactory;
     }
 

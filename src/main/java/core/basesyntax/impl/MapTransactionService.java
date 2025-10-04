@@ -1,8 +1,9 @@
 package core.basesyntax.impl;
 
-import core.basesyntax.*;
-
 import java.util.Map;
+import core.basesyntax.TransactionHandler;
+import core.basesyntax.TransactionService;
+import core.basesyntax.TransactionType;
 
 public class MapTransactionService implements TransactionService {
     private final Map<TransactionType, TransactionHandler> handlers;

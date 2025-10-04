@@ -1,10 +1,9 @@
 package core.basesyntax.impl;
 
+import java.math.BigInteger;
 import core.basesyntax.Database;
 import core.basesyntax.FruitType;
 import core.basesyntax.TransactionHandler;
-
-import java.math.BigInteger;
 
 public class SupplyTransactionHandler implements TransactionHandler {
     private static final TransactionHandler INSTANCE = new SupplyTransactionHandler();

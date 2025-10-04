@@ -5,11 +5,11 @@ public enum TransactionType {
 
     private final String code;
 
-    public String getCode() {
-        return code;
-    }
-
     TransactionType(String code) {
         this.code = code;
+    }
+
+    public String getCode() {
+        return code;
     }
 }
