@@ -1,12 +1,12 @@
 package core.basesyntax.impl;
 
+import core.basesyntax.Database;
+import core.basesyntax.FruitType;
+import core.basesyntax.TransactionService;
 import java.math.BigInteger;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.BiConsumer;
-import core.basesyntax.Database;
-import core.basesyntax.FruitType;
-import core.basesyntax.TransactionService;
 
 public class MapDatabase implements Database {
     private final Map<FruitType, BigInteger> fruitAmountMap;

@@ -1,5 +1,8 @@
 package core.basesyntax.impl;
 
+import core.basesyntax.FruitType;
+import core.basesyntax.Report;
+import core.basesyntax.ReportSerializer;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.math.BigInteger;
@@ -7,9 +10,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
-import core.basesyntax.FruitType;
-import core.basesyntax.Report;
-import core.basesyntax.ReportSerializer;
 
 public class CsvReportSerializer implements ReportSerializer {
     @Override

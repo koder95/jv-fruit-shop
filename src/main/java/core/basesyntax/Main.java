@@ -1,9 +1,5 @@
 package core.basesyntax;
 
-import java.nio.file.Path;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import core.basesyntax.impl.BalanceTransactionHandler;
 import core.basesyntax.impl.CsvReportSerializer;
 import core.basesyntax.impl.CsvTransactionRequestDeserializer;
@@ -14,6 +10,10 @@ import core.basesyntax.impl.PurchaseTransactionHandler;
 import core.basesyntax.impl.ReporterImpl;
 import core.basesyntax.impl.ReturnTransactionHandler;
 import core.basesyntax.impl.SupplyTransactionHandler;
+import java.nio.file.Path;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Main {
     public static final Path LOAD_PATH = Path.of("reportToRead.csv");

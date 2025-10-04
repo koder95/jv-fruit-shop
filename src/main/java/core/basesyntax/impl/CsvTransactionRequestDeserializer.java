@@ -1,7 +1,10 @@
 package core.basesyntax.impl;
 
-import core.basesyntax.*;
-
+import core.basesyntax.FruitType;
+import core.basesyntax.FruitTypeFactory;
+import core.basesyntax.TransactionRequest;
+import core.basesyntax.TransactionRequestDeserializer;
+import core.basesyntax.TransactionType;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.math.BigInteger;
