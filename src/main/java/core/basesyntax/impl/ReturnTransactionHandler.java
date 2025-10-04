@@ -8,11 +8,12 @@ import java.math.BigInteger;
 public class ReturnTransactionHandler implements TransactionHandler {
     private static final TransactionHandler INSTANCE = new ReturnTransactionHandler();
 
+    private ReturnTransactionHandler() {
+    }
+
     public static TransactionHandler instance() {
         return INSTANCE;
     }
-
-    private ReturnTransactionHandler() {}
 
     @Override
     public void handle(Database database, FruitType fruitType, BigInteger amount) {
