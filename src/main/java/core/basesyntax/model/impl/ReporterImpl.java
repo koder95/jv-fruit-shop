@@ -1,8 +1,8 @@
-package core.basesyntax.impl;
+package core.basesyntax.model.impl;
 
-import core.basesyntax.Database;
-import core.basesyntax.Report;
-import core.basesyntax.Reporter;
+import core.basesyntax.db.Database;
+import core.basesyntax.model.Report;
+import core.basesyntax.model.Reporter;
 
 public class ReporterImpl implements Reporter {
     @Override

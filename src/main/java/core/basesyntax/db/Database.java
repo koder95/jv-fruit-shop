@@ -1,4 +1,8 @@
-package core.basesyntax;
+package core.basesyntax.db;
+
+import core.basesyntax.model.FruitType;
+import core.basesyntax.model.TransactionRequest;
+import core.basesyntax.service.TransactionService;
 
 import java.math.BigInteger;
 import java.util.List;

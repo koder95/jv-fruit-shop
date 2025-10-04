@@ -1,4 +1,6 @@
-package core.basesyntax;
+package core.basesyntax.io;
+
+import core.basesyntax.model.Report;
 
 import java.nio.file.Path;
 

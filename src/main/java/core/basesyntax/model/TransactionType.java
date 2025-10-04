@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.model;
 
 public enum TransactionType {
     BALANCE("b"), SUPPLY("s"), PURCHASE("p"), RETURN("r");

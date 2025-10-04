@@ -1,8 +1,8 @@
-package core.basesyntax.impl;
+package core.basesyntax.db.impl;
 
-import core.basesyntax.Database;
-import core.basesyntax.FruitType;
-import core.basesyntax.TransactionService;
+import core.basesyntax.db.Database;
+import core.basesyntax.model.FruitType;
+import core.basesyntax.service.TransactionService;
 import java.math.BigInteger;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

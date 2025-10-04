@@ -1,8 +1,8 @@
-package core.basesyntax.impl;
+package core.basesyntax.io.impl;
 
-import core.basesyntax.FruitType;
-import core.basesyntax.Report;
-import core.basesyntax.ReportSerializer;
+import core.basesyntax.model.FruitType;
+import core.basesyntax.model.Report;
+import core.basesyntax.io.ReportSerializer;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.math.BigInteger;

@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.model;
 
 public interface FruitTypeFactory {
     default FruitType create(String name) {
