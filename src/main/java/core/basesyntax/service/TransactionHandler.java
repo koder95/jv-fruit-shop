@@ -5,5 +5,5 @@ import core.basesyntax.model.FruitType;
 import java.math.BigInteger;
 
 public interface TransactionHandler {
-    void handle(Database database, FruitType fruitType, BigInteger amount);
+    void handle(Database database, FruitType fruitType, BigInteger quantity);
 }

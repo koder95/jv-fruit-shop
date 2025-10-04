@@ -16,7 +16,7 @@ public class PurchaseTransactionHandler implements TransactionHandler {
     }
 
     @Override
-    public void handle(Database database, FruitType fruitType, BigInteger amount) {
-        database.remove(fruitType, amount);
+    public void handle(Database database, FruitType fruitType, BigInteger quantity) {
+        database.remove(fruitType, quantity);
     }
 }

@@ -16,7 +16,7 @@ public class BalanceTransactionHandler implements TransactionHandler {
     }
 
     @Override
-    public void handle(Database database, FruitType fruitType, BigInteger amount) {
-        database.set(fruitType, amount);
+    public void handle(Database database, FruitType fruitType, BigInteger quantity) {
+        database.set(fruitType, quantity);
     }
 }

@@ -34,8 +34,8 @@ public final class Report {
             this.recordMap = recordMap;
         }
 
-        public Builder set(FruitType fruitType, BigInteger amount) {
-            recordMap.put(fruitType, amount == null ? BigInteger.ZERO : amount);
+        public Builder set(FruitType fruitType, BigInteger quantity) {
+            recordMap.put(fruitType, quantity == null ? BigInteger.ZERO : quantity);
             return this;
         }
 

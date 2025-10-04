@@ -15,7 +15,7 @@ public interface Database {
     default void handle(TransactionRequest request) {
         getTransactionService()
                 .selectHandler(request.transactionType())
-                .handle(this, request.fruitType(), request.amount());
+                .handle(this, request.fruitType(), request.quantity());
     }
 
     default void handleAll(List<TransactionRequest> requests) {

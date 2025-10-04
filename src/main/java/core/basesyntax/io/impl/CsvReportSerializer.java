@@ -33,7 +33,7 @@ public class CsvReportSerializer implements ReportSerializer {
         return lines;
     }
 
-    private String createCsvRow(FruitType fruitType, BigInteger amount) {
-        return String.join(",", fruitType.name(), amount.toString());
+    private String createCsvRow(FruitType fruitType, BigInteger quantity) {
+        return String.join(",", fruitType.name(), quantity.toString());
     }
 }

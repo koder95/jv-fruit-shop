@@ -9,11 +9,11 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.BiConsumer;
 
 public class MapDatabase implements Database {
-    private final Map<FruitType, BigInteger> fruitAmountMap;
+    private final Map<FruitType, BigInteger> fruitQuantityMap;
     private final TransactionService service;
 
-    public MapDatabase(Map<FruitType, BigInteger> fruitAmountMap, TransactionService service) {
-        this.fruitAmountMap = fruitAmountMap;
+    public MapDatabase(Map<FruitType, BigInteger> fruitQuantityMap, TransactionService service) {
+        this.fruitQuantityMap = fruitQuantityMap;
         this.service = service;
     }
 
@@ -27,24 +27,24 @@ public class MapDatabase implements Database {
     }
 
     @Override
-    public void set(FruitType fruitType, BigInteger amount) {
-        fruitAmountMap.put(fruitType, amount);
+    public void set(FruitType fruitType, BigInteger quantity) {
+        fruitQuantityMap.put(fruitType, quantity);
     }
 
     @Override
-    public void add(FruitType fruitType, BigInteger amount) {
-        BigInteger oldOrZero = fruitAmountMap.getOrDefault(fruitType, BigInteger.ZERO);
-        set(fruitType, oldOrZero.add(amount));
+    public void add(FruitType fruitType, BigInteger quantity) {
+        BigInteger oldOrZero = fruitQuantityMap.getOrDefault(fruitType, BigInteger.ZERO);
+        set(fruitType, oldOrZero.add(quantity));
     }
 
     @Override
-    public void remove(FruitType fruitType, BigInteger amount) {
-        BigInteger oldOrZero = fruitAmountMap.getOrDefault(fruitType, BigInteger.ZERO);
-        set(fruitType, oldOrZero.subtract(amount));
+    public void remove(FruitType fruitType, BigInteger quantity) {
+        BigInteger oldOrZero = fruitQuantityMap.getOrDefault(fruitType, BigInteger.ZERO);
+        set(fruitType, oldOrZero.subtract(quantity));
     }
 
     @Override
     public void consume(BiConsumer<FruitType, BigInteger> consumer) {
-        fruitAmountMap.forEach(consumer);
+        fruitQuantityMap.forEach(consumer);
     }
 }

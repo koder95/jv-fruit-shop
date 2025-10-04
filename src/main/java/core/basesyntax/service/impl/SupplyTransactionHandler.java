@@ -16,7 +16,7 @@ public class SupplyTransactionHandler implements TransactionHandler {
     }
 
     @Override
-    public void handle(Database database, FruitType fruitType, BigInteger amount) {
-        database.add(fruitType, amount);
+    public void handle(Database database, FruitType fruitType, BigInteger quantity) {
+        database.add(fruitType, quantity);
     }
 }
