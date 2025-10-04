@@ -63,10 +63,10 @@ public class Main {
 
     private static Map<TransactionType, TransactionHandler> createTransactionTypeMap() {
         HashMap<TransactionType, TransactionHandler> map = new HashMap<>();
-        map.put(TransactionType.BALANCE, BalanceTransactionHandler.instance());
-        map.put(TransactionType.SUPPLY, SupplyTransactionHandler.instance());
-        map.put(TransactionType.PURCHASE, PurchaseTransactionHandler.instance());
-        map.put(TransactionType.RETURN, ReturnTransactionHandler.instance());
+        map.put(TransactionType.BALANCE, new BalanceTransactionHandler());
+        map.put(TransactionType.SUPPLY, new SupplyTransactionHandler());
+        map.put(TransactionType.PURCHASE, new PurchaseTransactionHandler());
+        map.put(TransactionType.RETURN, new ReturnTransactionHandler());
         return Map.copyOf(map);
     }
 

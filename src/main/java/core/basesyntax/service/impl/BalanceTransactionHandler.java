@@ -6,17 +6,11 @@ import core.basesyntax.service.TransactionHandler;
 import java.math.BigInteger;
 
 public class BalanceTransactionHandler implements TransactionHandler {
-    private static final TransactionHandler INSTANCE = new BalanceTransactionHandler();
-
-    private BalanceTransactionHandler() {
-    }
-
-    public static TransactionHandler instance() {
-        return INSTANCE;
-    }
-
     @Override
     public void handle(Database database, FruitType fruitType, BigInteger quantity) {
+        if (quantity == null || quantity.signum() < 0) {
+            throw new IllegalArgumentException("Quantity is wrong. Cannot be: " + quantity);
+        }
         database.set(fruitType, quantity);
     }
 }
