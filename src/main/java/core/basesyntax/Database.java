@@ -6,10 +6,13 @@ import java.util.function.BiConsumer;
 
 public interface Database {
     void consume(BiConsumer<FruitType, BigInteger> consumer);
+
     TransactionService getTransactionService();
 
     default void handle(TransactionRequest request) {
-        getTransactionService().selectHandler(request.transactionType()).handle(this, request.fruitType(), request.amount());
+        getTransactionService()
+                .selectHandler(request.transactionType())
+                .handle(this, request.fruitType(), request.amount());
     }
 
     default void handleAll(List<TransactionRequest> requests) {
