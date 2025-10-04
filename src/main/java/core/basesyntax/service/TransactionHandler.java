@@ -1,7 +1,7 @@
 package core.basesyntax.service;
 
-import core.basesyntax.model.FruitType;
 import core.basesyntax.db.Database;
+import core.basesyntax.model.FruitType;
 import java.math.BigInteger;
 
 public interface TransactionHandler {
