@@ -1,0 +1,43 @@
+package core.basesyntax;
+
+import java.math.BigInteger;
+import java.util.*;
+import java.util.function.BiConsumer;
+import java.util.function.Supplier;
+
+public final class Report {
+    private final Map<FruitType, BigInteger> recordMap;
+
+    private Report(Map<FruitType, BigInteger> recordMap) {
+        this.recordMap = Collections.unmodifiableMap(Objects.requireNonNull(recordMap));
+    }
+
+    public void consume(BiConsumer<FruitType, BigInteger> consumer) {
+        recordMap.forEach(consumer);
+    }
+
+    public static Builder builder(Map<FruitType, BigInteger> initMap) {
+        return new Builder(initMap);
+    }
+
+    public static Builder builder() {
+        return builder(new HashMap<>());
+    }
+
+    public static class Builder implements Supplier<Report> {
+        private final Map<FruitType, BigInteger> recordMap;
+
+        public Builder(Map<FruitType, BigInteger> recordMap) {
+            this.recordMap = recordMap;
+        }
+
+        public Builder set(FruitType fruitType, BigInteger amount) {
+            recordMap.put(fruitType, amount == null ? BigInteger.ZERO : amount);
+            return this;
+        }
+
+        public Report get() {
+            return new Report(recordMap);
+        }
+    }
+}
